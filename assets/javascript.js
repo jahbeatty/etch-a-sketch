@@ -80,6 +80,10 @@ rainbowBtn.addEventListener('click', () => {
 dimButton.addEventListener('click', () =>{
     rows = prompt(`Enter number of rows`);
     columns = prompt(`Enter number of columns`);
+    if(rows === "" || columns === ""){
+        rows = 16;
+        columns = 16;
+    }
     while(container.firstChild){
         container.removeChild(container.lastChild);
     }
